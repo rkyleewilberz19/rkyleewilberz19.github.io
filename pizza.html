@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pizza Ordering Form</title>
+</head>
+
+<body>
+  <header>
+    <h1>Pizza Ordering Form</h1>
+  </header>
+
+  <main>
+    <form action="#" method="post">
+      <section aria-labelledby="contact">
+        <h2 id="contact">Contact Information</h2>
+
+        <p>
+          <label for="name">Name:</label>
+          <input id="name" name="name" type="text" required />
+        </p>
+
+        <p>
+          <label for="phone">Phone:</label>
+          <input id="phone" name="phone" type="tel" required />
+        </p>
+
+        <p>
+          <label for="email">Email:</label>
+          <input id="email" name="email" type="email" required />
+        </p>
+      </section>
+
+      <section aria-labelledby="size">
+        <h2 id="size">Select Pizza Size</h2>
+
+        <p>
+          <label for="pizzaSize">Pizza Size:</label>
+          <select id="pizzaSize" name="pizzaSize" required>
+            <option value="" selected disabled>--Select Size--</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="XLarge">XLarge</option>
+          </select>
+        </p>
+      </section>
+
+      <section aria-labelledby="sauce">
+        <h2 id="sauce">Select Sauce</h2>
+
+        <p>
+          <input id="marinara" name="sauce" type="radio" value="Marinara" required />
+          <label for="marinara">Marinara</label>
+        </p>
+
+        <p>
+          <input id="ranch" name="sauce" type="radio" value="Ranch" />
+          <label for="ranch">Ranch</label>
+        </p>
+
+        <p>
+          <input id="nosauce" name="sauce" type="radio" value="No Sauce" />
+          <label for="nosauce">No Sauce</label>
+        </p>
+      </section>
+
+      <section aria-labelledby="toppings">
+        <h2 id="toppings">Select Toppings</h2>
+
+        <p>
+          <input id="pepperoni" name="toppings" type="checkbox" value="Pepperoni" />
+          <label for="pepperoni">Pepperoni</label>
+
+          <input id="sausage" name="toppings" type="checkbox" value="Sausage" />
+          <label for="sausage">Sausage</label>
+        </p>
+
+        <p>
+          <input id="mushroom" name="toppings" type="checkbox" value="Mushroom" />
+          <label for="mushroom">Mushroom</label>
+
+          <input id="pineapple" name="toppings" type="checkbox" value="Pineapple" />
+          <label for="pineapple">Pineapple</label>
+        </p>
+
+        <p>
+          <input id="peppers" name="toppings" type="checkbox" value="Peppers" />
+          <label for="peppers">Peppers</label>
+
+          <input id="onions" name="toppings" type="checkbox" value="Onions" />
+          <label for="onions">Onions</label>
+        </p>
+      </section>
+
+      <section aria-labelledby="instructions">
+        <h2 id="instructions">Additional Instructions</h2>
+
+        <p>
+          <label for="notes" class="visually-hidden">Additional instructions</label>
+          <textarea id="notes" name="notes" rows="3" cols="25">Add instructions</textarea>
+        </p>
+
+        <p>
+          <button type="submit">Submit</button>
+        </p>
+      </section>
+    </form>
+
+<section aria-labelledby="games">
+  <h2 id="games">List of My Favorite Games</h2>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th scope="col">Developer</th>
+        <th scope="col">Title</th>
+        <th scope="col">Year</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td rowspan="2">Bungie</td>
+        <td>Halo 3</td>
+        <td>2007</td>
+      </tr>
+      <tr>
+        <td>Halo Reach</td>
+        <td>2010</td>
+      </tr>
+
+      <tr>
+        <td>Battlestate Games</td>
+        <td>Escape from Tarkov</td>
+        <td>2017</td>
+      </tr>
+
+      <tr>
+        <td>DICE</td>
+        <td>Star Wars Battlefront II (Xbox 360)</td>
+        <td>2005</td>
+      </tr>
+
+      <tr>
+        <td colspan="3">Count: 4</td>
+      </tr>
+      </tbody>
+    </table>
+  </section>
+  </main>
+
+  <footer>
+    <p><a href="index.html">Back to Resume</a></p>
+  </footer>
+</body>
+</html>
