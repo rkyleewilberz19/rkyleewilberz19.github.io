@@ -162,7 +162,7 @@ a[href*="google.com"]::after {
   width: 22px;
   height: 22px;
   margin-left: 8px;
-  background: url("arrowarrow.png") no-repeat center;
+  background: url("arrow.png") no-repeat center;
   background-size: contain;
 }
 
