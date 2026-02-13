@@ -1,242 +1,80 @@
-/* =========================
-   Base / Reset
-========================= */
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
+/* ===== Basic Reset ===== */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.55;
-  background: #f2f7ff;
-  color: #111;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #blue;
+  color: black;
 }
 
-/* Make images/media behave (just in case later) */
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* =========================
-   Header
-========================= */
+/* ===== Header ===== */
 header {
-  background: #003366;          /* deep blue */
-  color: #fff;
-  padding: 24px 18px;
-  border-bottom: 4px solid #0073e6; /* bright blue accent */
+  background-color: #2563eb;
+  color: white;
+  padding: 20px;
+  text-align: center;
 }
 
-header h1 {
-  margin: 0 0 8px 0;
-  font-size: 34px;
-  letter-spacing: 0.5px;
-}
-
-header address {
-  font-style: normal; /* keep it readable */
-  opacity: 0.95;
-}
-
-header address p {
-  margin: 6px 0;
-}
-
-header a {
-  color: #bfe0ff;
-  text-decoration: underline;
-}
-
-header a:hover {
-  color: #ffffff;
-}
-
-/* =========================
-   Nav
-========================= */
-nav[aria-label="Primary"] {
-  background: #e8f1ff;
-  border-bottom: 1px solid #cfe3ff;
-  padding: 12px 18px;
+/* ===== Navigation ===== */
+nav {
+  background-color: #3b82f6;
+  padding: 10px;
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  gap: 10px;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
 }
 
 nav li {
-  margin: 0;
+  margin: 5px 0;
 }
 
-/* Buttons/links look */
 nav a {
-  display: inline-block;
-  padding: 10px 14px;
-  background: #0073e6;
-  color: #fff;
+  color: white;
   text-decoration: none;
-  border-radius: 8px;
-  font-weight: 700;
-  transition: background 0.2s ease, transform 0.2s ease;
+  font-weight: bold;
 }
 
 nav a:hover {
-  background: #0059b3;
-  transform: translateY(-1px);
+  text-decoration: underline;
 }
 
-/* =========================
-   Main content wrapper
-========================= */
+/* ===== Main Content ===== */
 main {
-  padding: 18px;
-  max-width: 1100px;
-  margin: 0 auto;
+  padding: 20px;
 }
 
-/* Sections */
-main section {
-  background: #fff;
-  border-radius: 10px;
-  padding: 18px;
-  margin: 16px 0;
-  border-left: 6px solid #0073e6;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+/* White content boxes */
+section {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
 }
 
 /* Headings */
 h2 {
-  margin: 0 0 10px 0;
-  color: #0059b3;
-  font-size: 22px;
+  color: #1e3a8a;
 }
 
-h3 {
-  margin: 12px 0 6px 0;
-  color: #003366;
-  font-size: 18px;
-}
-
-/* Paragraph spacing */
-p {
-  margin: 8px 0;
-}
-
-/* Lists */
-ul {
-  margin: 10px 0 0 0;
-  padding-left: 22px;
-}
-
-li {
-  margin: 6px 0;
-}
-
-/* Project links inside <h3><a> */
-main a {
-  color: #0059b3;
-  text-decoration: underline;
-}
-
-main a:hover {
-  color: #003366;
-}
-
-
+/* Footer */
 footer {
-  margin-top: 24px;
-  padding: 16px 18px;
+  background-color: #2563eb;
+  color: white;
   text-align: center;
-  background: #003366;
-  color: #fff;
-  border-top: 4px solid #0073e6;
+  padding: 15px;
 }
 
-/*Responsive: Mobile (412px)*/
+/* ===== Responsive ===== */
 @media (max-width: 412px) {
-  header {
-    padding: 18px 14px;
-  }
-
-  header h1 {
-    font-size: 26px;
-  }
-
-  nav[aria-label="Primary"] {
-    padding: 10px 14px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  nav a {
-    width: 100%;
-    text-align: center;
-    padding: 12px 14px;
-  }
-
-  main {
-    padding: 14px;
-  }
-
-  main section {
-    padding: 14px;
+  body {
+    font-size: 14px;
   }
 }
 
-/* Responsive: Desktop layout
-   (wide screens)
-   Turns into 2-column:
-   nav on left, main on right*/
 @media (min-width: 1200px) {
-  /* Page layout: header full width, then nav + main side-by-side */
   body {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas:
-      "header header"
-      "nav nav"
-      "nav main"
-      "footer footer";
-  }
-
-  header { grid-area: header; }
-  nav[aria-label="Primary"] { 
-    grid-area: nav;
-    border-bottom: none;
-    border-right: 1px solid #cfe3ff;
-    min-height: 100%;
-  }
-  main { grid-area: main; }
-  footer { grid-area: footer; }
-
-  /* Make nav a vertical menu on desktop */
-  nav ul {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  nav a {
-    width: 100%;
-    text-align: left;
-  }
-
-  main {
-    max-width: 1200px;
-    padding: 24px;
+    font-size: 18px;
   }
 }
