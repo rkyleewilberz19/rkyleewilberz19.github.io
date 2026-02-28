@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pokemon Team Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <main class="page">
+    <section class="card" aria-label="Pokemon Team Builder">
+      <h1 class="title">Name or ID</h1>
+
+      <!-- Search row -->
+      <div class="searchRow">
+        <label class="srOnly" for="pokemonInput">Name or ID</label>
+        <input id="pokemonInput" class="textInput" type="text" placeholder="e.g., snorlax or 143" />
+        <button id="findBtn" class="btn" type="button">Find</button>
+      </div>
+
+      <!-- Sprite -->
+      <div class="spriteWrap">
+        <img
+          id="pokemonImg"
+          class="sprite"
+          src=""
+          alt="Pokemon sprite will appear here"
+        />
+      </div>
+
+      <!-- Audio -->
+      <div class="audioWrap">
+        <audio id="pokemonAudio" class="audio" controls>
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+
+      <!-- Moves -->
+      <div class="movesGrid" aria-label="Move selection">
+        <div class="moveCol">
+          <label class="srOnly" for="move1">Move 1</label>
+          <select id="move1" class="select">
+            <option value="">(move 1)</option>
+          </select>
+
+          <label class="srOnly" for="move2">Move 2</label>
+          <select id="move2" class="select">
+            <option value="">(move 2)</option>
+          </select>
+        </div>
+
+        <div class="moveCol">
+          <label class="srOnly" for="move3">Move 3</label>
+          <select id="move3" class="select">
+            <option value="">(move 3)</option>
+          </select>
+
+          <label class="srOnly" for="move4">Move 4</label>
+          <select id="move4" class="select">
+            <option value="">(move 4)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Add to team -->
+      <div class="centerRow">
+        <button id="addToTeamBtn" class="btn" type="button">Add to Team</button>
+      </div>
+
+      <!-- Team display -->
+      <section class="teamBox" aria-label="Current Team">
+        <table class="teamTable" id="teamTable">
+          <tbody id="teamBody">
+            <!-- Example row (remove if you want empty by default)
+            <tr>
+              <td class="teamSpriteCell">
+                <img class="teamSprite" src="" alt="Team pokemon sprite" />
+              </td>
+              <td class="teamMovesCell">
+                <ul class="movesList">
+                  <li>move-one</li>
+                  <li>move-two</li>
+                  <li>move-three</li>
+                  <li>move-four</li>
+                </ul>
+              </td>
+            </tr>
+            -->
+          </tbody>
+        </table>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
